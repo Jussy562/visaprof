@@ -34,7 +34,7 @@ function Payment() {
                 className="shadow appearance-none border rounded w-full py-2 px-3
                 text-gray-700 leading-tight focus:outline-none  
                 focus:shadow-outline" id="firstName" type="text" 
-                placeholder="Email" name='firstName' required
+                placeholder="First Name" name='firstName' required
                 />
             </div>
             <div className='mb-4 flex flex-col text-start'>
@@ -46,7 +46,7 @@ function Payment() {
                 className="shadow appearance-none border rounded w-full py-2 px-3
                 text-gray-700 leading-tight focus:outline-none  
                 focus:shadow-outline" id="lastName" type="text" 
-                placeholder="Email" name='lastName' required
+                placeholder="Last Name" name='lastName' required
                 />
             </div>
             <div className='mb-4 flex flex-col text-start'>
