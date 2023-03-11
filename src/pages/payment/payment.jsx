@@ -26,6 +26,30 @@ function Payment() {
         className='w-full flex flex-col bg-white shadow-md 
         rounded px-8 pt-6 pb-8'>
             <div className='mb-4 flex flex-col text-start'>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">
+                    First Name
+                </label>
+                <input 
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3
+                text-gray-700 leading-tight focus:outline-none  
+                focus:shadow-outline" id="firstName" type="text" 
+                placeholder="Email" name='firstName' required
+                />
+            </div>
+            <div className='mb-4 flex flex-col text-start'>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+                    Last Name
+                </label>
+                <input 
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3
+                text-gray-700 leading-tight focus:outline-none  
+                focus:shadow-outline" id="lastName" type="text" 
+                placeholder="Email" name='lastName' required
+                />
+            </div>
+            <div className='mb-4 flex flex-col text-start'>
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                     Email
                 </label>
