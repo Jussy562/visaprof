@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import { Link } from 'react-router-dom';
 import Button from '../../components/button/button'
+import SecondaryButton from '../../components/button/secondaryButton';
 import { handlePayment } from '../../hooks/paystack';
 
 function Payment() {
@@ -75,10 +76,12 @@ function Payment() {
             </div>
 
             <div className='flex flex-row justify-between w-full'>
-                <Button title={'Submit'} type={"submit"} />
-                <div>
+                <div className='w-2/3 m-0 flex justify-start'>
+                    <Button title={'Submit'} type={"submit"} />
+                </div>
+                <div className='w-1/3 m-0 flex justify-end'>
                     <Link to='/'>
-                        <Button title={'Back'} bg={'bg-gray-200'} />
+                        <SecondaryButton name={'Back'} />
                     </Link>
                 </div>
                 
