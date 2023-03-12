@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useState } from "react";
 
 export const handlePayment = (email, amount, firstName) => {
     const handler = PaystackPop.setup({
@@ -12,10 +13,15 @@ export const handlePayment = (email, amount, firstName) => {
           // const reference = response.reference;
           // alert('Payment complete! Reference: ' + reference);
           // Make an AJAX call to your server with the reference to verify the transaction
+
+          const [result, setResult] = useState(null);
+          window.location = "https://api.paystack.co/transaction/verify/${ref}";
            
           axios.get(`https://api.paystack.co/transaction/verify/${ref}`).then((response) => {
-                
+              setResult(response.data.status);
+              alert(result);
           })
+          
         },
         onClose: () => {
           alert('Transaction was not completed, window closed.');
